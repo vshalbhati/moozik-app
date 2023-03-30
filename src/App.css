@@ -2,25 +2,174 @@
   padding: 0;
   margin: 0;
 }
-.dabba{
-  height: 6em;
+body{
+  height: 100%;
   width: 100%;
-  background-image: linear-gradient(rgb(254, 206, 255),rgb(249, 169, 253));
-  color: white;
+  overflow: hidden;
+  color: #ffffff;
+  background-image: url('https://images.unsplash.com/photo-1605731414532-6b26976cc153?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.dabba{
+  height: 5em;
+  width: 100%;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(69,137,252,1) 100%);  color: white;
   font-size: xx-large;
   text-align: center;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.395);
+}
+.niche{
+  transform: rotateZ(-90deg) scale(1.5);
+  margin-left: -2em;
+  margin-top: -1em;
 }
 .bar{
   height: 2em;
   width: 15em;
   top: 0;
+  margin: 1em;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.498);
+  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.6);
+  border: none;
 }
+.bar[type="text"]{color: aliceblue;}
+.bar::placeholder{color: rgb(255, 255, 255);padding-left: 5px;}
 .srcbtn{
   height: 2em;
   width: 6em;
-  background-color: rgba(247, 160, 249, 0.402);
+  background-color: rgba(0, 0, 0, 0.696);
   color: white;
   border: none;
-  margin-left: 2em;
+  cursor: pointer;
+  margin: 1em;
+  border-radius: 5px;
+}
+.srcbtn:hover{
+  transform: scale(1.1);
+  transition: 0.8s ease-in-out;
+}
+input[type="text"]:focus {
+  border-collapse:collapse;
+}
+.search{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sngimg{
+  height: 10em;
+  width: 10em;
+}
+.srcres{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 3em;
+  height: 70vh;
+  width: 21.3%;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.509);
+  overflow: scroll;
+  contain: content;
+  z-index: 1;
+  opacity: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.cards{
+  margin-left: 1.2em;
+  margin-top: 1em;
+  display: flex;
+  height: max-content;
+  width: max-content;
+}
+.tcs::-webkit-scrollbar {
+  display: none;
+}
+.card{
+  height: max-content;
+  width: max-content;
+  padding: 0.3em;
+  backdrop-filter: blur(12px) saturate(200%);
+  -webkit-backdrop-filter: blur(12px) saturate(200%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.card img,.liked img{
+  height: 9em;
+  width: 9em;
+  box-shadow: 5px 5px 10px black;
+  border-radius: 7px;
+  border: none;
+}
+.card:hover{
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+.account,.settings,.playlists,.mysongs,.surpise{display: flex; gap: 1em;padding: 0.5em;}
+.account:hover,.settings:hover,.playlists:hover,.mysongs:hover,.surpise:hover{
+  background-color: black;
+  
+}
+.tcs,.liked{
+  width: 85%;
+  height: 16.5em;
+  margin-left: 15%;
+  overflow: scroll;
+  position: relative;
+}
+.tcs h2,.liked h2{
+  margin-left: 1em;
+}
+.sidenav{
+  height: 100%;
+  width: 15%;
+  position: absolute;
+  left: 0;
+  box-shadow: 5px 5px 10px black;
+  color: aliceblue;
+  backdrop-filter: blur(12px) saturate(200%);
+  -webkit-backdrop-filter: blur(12px) saturate(200%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.playlists,.mysongs,.surpise{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.3em;
+  cursor:pointer;
+  padding: 0.5em;
+}
+.down{
+  position: absolute;
+  margin-top: 15em;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.3em;
+  cursor:pointer;
+}
+.heart-icon,.FaTimes {
+  color: rgba(255, 255, 255, 0.76);
+}
+/* .heart-icon:active, .FaTimes:active {
+  animation: badao 0.2s ease-in-out;
+}
+@keyframes badao {
+  100%{
+    transform: translateX(4em) translateY(-5em) scale(5);
+  }
+} */
+.heart-icon:hover{
+  color: rgba(255, 0, 179, 0.76);
+  transition: 0.4s ease-in-out;
+  transform: scale(1.2);
+}
+.FaTimes:hover{
+  color: rgba(255, 0, 0, 0.76);
+  transition: 0.4s ease-in-out;
+  transform: scale(1.2);
 }

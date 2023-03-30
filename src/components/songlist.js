@@ -5,8 +5,8 @@ function SongList(props) {
     <ul>
       {props.songs.map(song => (
         <li key={song.id}>
-          <div>
-            <img src={song.coverArtUrl} alt={song.title} />
+          <div >
+            <img className="sngimg" src={song.coverArtUrl} alt={song.title} />
           </div>
           <div>
             <p>{song.title}</p>
